@@ -25,4 +25,6 @@ Route::get('/editprofile', 'ProfileController@editProfile');
 Route::post('/editprofile/{user_id}', 'ProfileController@editProfilePost');
 Route::get('/uploadpicture', 'ProfileController@uploadPicture');
 Route::post('/uploadpicture/{user_id}', 'ProfileController@uploadPicturePost');
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
